@@ -14,10 +14,12 @@ class TestUser(HttpUser):
     def on_stop(self):
         self.client.post("/logout_api")
 
+    #홈 화면 이동
     @task
     def Home(self):
         self.client.get("/home")
 
+    #사칙 연산 시도
     @task
     def Calculator(self):
         num1 = random.randint(1, 2000)
@@ -27,14 +29,13 @@ class TestUser(HttpUser):
             "num1": num1, "num2": num2
         }
         self.client.get(f"/calculator_api/{operator}", params=params)
-        #self.client.get("/calculator_api/subtract", params=params)
-        #self.client.get("/calculator_api/multiply", params=params)
-        #self.client.get("/calculator_api/divide", params=params)
 
+    #히스토리 화면 이동
     @task
     def HistoryView(self):
         self.client.get("/history_view")
 
+    #히스토리 API 호출
     @task
     def HistoryAPI(self):
         self.client.get("/history_api")
