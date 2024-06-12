@@ -1,6 +1,6 @@
+from locust import HttpUser, task, between, SequentialTaskSet
 import json
 import random
-from locust import HttpUser, task, between, SequentialTaskSet
 
 class TestUser(HttpUser):
     wait_time = between(1, 2)
