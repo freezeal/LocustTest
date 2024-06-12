@@ -7,5 +7,5 @@ Locust를 이용한 부하테스트
 - 실행 : locust -f {실행 파일명}.py
 ---------------------------------------------
 - 테스트 결과
-이미지 추가
-이미지 추가
+  ![RPS/ResTime](.venv/images/RPS:ResponseTime.png)
+  ![유저 생성](.venv/images/User.png)
