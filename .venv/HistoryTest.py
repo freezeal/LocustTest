@@ -36,6 +36,6 @@ class HistoryScenario(HttpUser):
         self.client.get("/history_api")
 
     #히스토리 삭제 api 호출
-    @task(2)
+    @task(1)
     def HistoryDel(self):
         self.client.delete("/delete_history")
